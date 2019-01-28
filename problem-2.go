@@ -11,7 +11,7 @@ import (
 
 //solution->done
 
-func main() {
+func main_shmain() {
 
 	fmt.Print("Enter number: ")
 	reader := bufio.NewScanner(os.Stdin)//New scanner for users number

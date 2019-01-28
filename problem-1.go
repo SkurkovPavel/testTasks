@@ -11,9 +11,15 @@ import (
 
 //solution->done
 
-func main() {
-	fmt.Print("Enter number: ")
+func main() {print("Enter number: ")
 	reader := bufio.NewScanner(os.Stdin)//New scanner for users numbers
+	result := GetArrayFromUser(reader)
+	fmt.Printf("Result: %v",result)
+
+}
+
+func GetArrayFromUser(reader *bufio.Scanner) []int{
+
 
 	var basicSlice []int //Slice for user numbers
 
@@ -21,15 +27,15 @@ func main() {
 		breaker := reader.Text()//Get string from user
 		i, err := strconv.Atoi(breaker)//Just convert string to int
 		if err != nil { //If something going wrong or user finished input
-			fmt.Print("result:")
 			break
 		}
 		basicSlice = append(basicSlice, i) //Append users numbers into slice
-		fmt.Print("One more number?:") //Just say something for fun
+		//fmt.Print("One more number?:") //Just say something for fun
 		continue //Continue scanning
 	}
 	arraySort(basicSlice)
-	fmt.Println(basicSlice) //Print result
+
+	return basicSlice //Print result
 }
 
 func arraySort(basicSlice []int)  {
