@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-//Problem: it is necessary to expand the array using only the "arraySwap" function
+//Problem: it is necessary to sort the array using only the "arraySwap" function
 
 //solution->done
 
@@ -48,7 +48,7 @@ func main() {
 }
 
 func arraySwap(arr []int, n int) {
-	//Ыwap array elements
+	//Swap array elements
 	arr[n], arr[0] = arr[0], arr[n]
 
 }
