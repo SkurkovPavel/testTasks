@@ -28,6 +28,11 @@ func main() {
 		fmt.Print("One more number?:") //Just say something for fun
 		continue //Continue scanning
 	}
+	arraySort(basicSlice)
+	fmt.Println(basicSlice) //Print result
+}
+
+func arraySort(basicSlice []int)  {
 	esc := false //Flag to exit an infinite loop
 	for !esc { //Star infinite loop
 		esc = true //Set the flag to exit the loop when we finish sorting
@@ -44,13 +49,11 @@ func main() {
 
 		}
 	}
-	fmt.Println(basicSlice) //Print result
 }
 
 func arraySwap(arr []int, n int) {
 	//Swap array elements
 	arr[n], arr[0] = arr[0], arr[n]
-
 }
 
 
