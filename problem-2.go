@@ -14,12 +14,12 @@ import (
 func main_shmain() {
 
 	fmt.Print("Enter number: ")
-	reader := bufio.NewScanner(os.Stdin)//New scanner for users number
+	reader := bufio.NewScanner(os.Stdin) //New scanner for users number
 	var number int
-	for reader.Scan() {//Start scanning terminal
-		breaker := reader.Text()//Get string from user
-		i, err := strconv.Atoi(breaker)//Just convert string to int
-		if err != nil {//If something going wrong
+	for reader.Scan() { //Start scanning terminal
+		breaker := reader.Text()        //Get string from user
+		i, err := strconv.Atoi(breaker) //Just convert string to int
+		if err != nil {                 //If something going wrong
 			fmt.Println("Oops, something went wrong")
 			continue
 		}
@@ -32,7 +32,6 @@ func main_shmain() {
 	}
 	fmt.Printf("Result: %v", inverseNumber(number))
 }
-
 
 func inverseNumber(n int) (i int) {
 	for n != 0 {
